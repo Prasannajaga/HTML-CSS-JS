@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.item{
+    border: 1px solid;
+    padding: 10px;
+}
+
+.India{
+    background: linear-gradient(orange , white , green);
+    background-position: left ;
+    background-size: var(--p,0) ;
+    background-repeat: no-repeat;
+}
+
+.Konoha{
+    background: linear-gradient(lightgreen , white , green);
+    background-position: right;
+    background-size: var(--p , 0);
+    background-repeat: no-repeat;
+}
+ 
+
+.user-content{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item{
+    padding: 50px 30px;
+    border-radius: 10px;
+    max-width: 100%;
+    transition: .4s;
+    background: url(../assets/search.svg) no-repeat transparent;
+    background-size: 1.5rem;
+    background-position: 50% 75%;
+    /* transition-property: transform , background-position ; */
+}
+
+.item:hover {
+    transform: translateY(-10px);
+}
+
+.Konoha:hover , .India:hover{
+    --p:100%;
+}
+
+
+ 
+
