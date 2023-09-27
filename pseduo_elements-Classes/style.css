@@ -35,19 +35,50 @@ ul li{
     border: 1px solid red;
 }
 
+/* selecting first child of the given class element  */
 .firstItems :first-child{ 
     border: 1px solid orange;
 }
 
-.seconditems :first-child::after{
+/* selecting last child of the given class element  */
+.firstItems :last-child{
+    color: aquamarine;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* nth classes only accessible using the index  */
+
+/* selecting child of the element using index   */
+.firstItems :nth-child(3):hover{
+    transition: background 2s , color 3s;
+    background: red;
+    color: yellow;
+}
+
+.firstItems :nth-last-child(2):hover{
+    transition: background 2s , color 3s;
+    background: yellow;
+    color: red;
+}
+
+/* pesudo classes combined with pseudo elements  */
+.seconditems :first-child{
+    --p : 1px;  /*  created local variable  */
     content: ""; 
     background-size: cover;
     background-position: center;
     margin-left: 1rem; 
-    height: 200px; 
-    border: 1px solid red;
+     border: var(--p) solid red;
 }
 
+.seconditems :first-child:hover{
+    --p:10px;
+     /* updating variable when hovering */
+}
+
+
+/* pesudo classes combined with pseudo elements  */
 .seconditems :first-child::before{
     content: "";
     margin-right: 1rem;
