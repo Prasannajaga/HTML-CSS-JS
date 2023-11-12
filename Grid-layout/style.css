@@ -18,9 +18,8 @@ body{
 
 .userCard{
     display: grid;
-    grid-template-columns: repeat(2, minmax(400px , 20rem));
-    gap: 1rem;  
-    grid-auto-columns: auto; 
+    grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+    gap: 1rem;   
 }
 
 .items{ 
